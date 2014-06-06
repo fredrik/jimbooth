@@ -6,7 +6,9 @@ from datetime import datetime
 import subprocess
 
 
-HOOKSCRIPT = "/Users/fredrik/gphoto/jimbooth/hook.py"
+HERE = os.path.dirname(__file__)
+HOOKSCRIPT = os.path.join(HERE, "hook.py")
+
 
 LOCK_FILE = "/tmp/what.lock"
 LOCK_DURATION = 60  # seconds
