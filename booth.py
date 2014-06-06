@@ -52,6 +52,12 @@ def grab_mutex():
         return True
 
 
+def countdown():
+    for word in ['three', 'two', 'one']:
+        run('say {}'.format(word))
+        time.sleep(1)
+
+
 def booth():
     print 'boothing.'
 
@@ -65,6 +71,9 @@ def booth():
 
     # kill PTPCamera
     run('killall PTPCamera 2> /dev/null', ignore_errors=True)
+
+    # play countdown sample
+    countdown()
 
     # run gphoto
     print 'gphoto'
